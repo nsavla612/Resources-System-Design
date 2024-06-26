@@ -1,0 +1,107 @@
+<mxfile host="app.diagrams.net" modified="2024-06-26T02:48:11.789Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="LAV_meBD1cGk9Epg1GPz" version="24.6.3" type="device">
+  <diagram name="Page-1" id="ZYyfZYtQ7na_r4eD4yQo">
+    <mxGraphModel dx="1993" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-1" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;LOCKER -&amp;nbsp;&lt;br&gt;1. Items can be placed.&lt;br&gt;2. Returns can be through item.&lt;br&gt;3. Limited lockers&lt;br&gt;4. talk about how lockers are assigned to users&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry y="20" width="380" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-2" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;FUNCTIONAL REQUIREMENTS -&amp;nbsp;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;1. System should provide relevant passcode and reserve the locker for a user for a given period of time&lt;br&gt;&lt;b&gt;2. System should able to handle returning of items for users which were ordered&lt;br&gt;3. System should HELP the user FIND an appropriate locker.&lt;br&gt;4. System should help me to reserve the locker for a given period of time along with access mutually&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-30" y="140" width="770" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-4" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;NON FUNCTIONAL REQUIREMENTS&lt;br&gt;&lt;br&gt;Availability&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;br&gt;End to End Latency - Ordering and finding the locker should not take more time. Passcode generation should take less time. P90 Latency &amp;lt;= 200 millisecond.&lt;br&gt;Security - Users should be authenticated.&lt;br&gt;Scalability - System should scale to accomodate increased items without impacting percentage.&lt;br&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry y="290" width="790" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-5" value="APIS -&amp;nbsp;&lt;br&gt;&lt;br&gt;&lt;br&gt;REST API - GET /api/v1/searchLocker {user_id, user_location, order_id, max_distance, size, offset,&amp;nbsp; }&lt;br&gt;returns : 200 - with a List&amp;lt; Locker &amp;gt; .&lt;br&gt;200 - message &quot; no available lockers at this time&quot;&lt;br&gt;&lt;br&gt;&lt;br&gt;REST HTTP POST /api/v1/reserveLocker { user_id, locker_id, order_id, }&lt;div&gt;returns : 200 - { locker details and OTP }&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="480" width="660" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-6" value="HIGH LEVEL DIAGRAM" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="120" y="700" width="540" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-7" value="SEARCHLOCKER API -&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-50" y="748" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="91sjNXzrEvbF6dkrTKEq-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="880" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-8" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="820" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="91sjNXzrEvbF6dkrTKEq-10" target="91sjNXzrEvbF6dkrTKEq-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-10" value="&lt;br&gt;API GATEWAY" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="818" width="120" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="91sjNXzrEvbF6dkrTKEq-11" target="91sjNXzrEvbF6dkrTKEq-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-11" value="monolithic APP&lt;br&gt;&lt;br&gt;LOCKER SERVICE - WHICH WILL FETCH THE RECMOMMENDED LOCKERS" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="772.5" width="140" height="377.5" as="geometry" />
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-13" value="DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="840" y="820" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-15" value="/GET SEARCHLOCKER" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="85" y="818" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-18" value="LOCKER INFORMATION" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="790" y="918" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-19" value="RESERVE LOCKER" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-55" y="988" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="91sjNXzrEvbF6dkrTKEq-20">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="1090" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-20" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1080" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-24" value="/RPC CALL" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="360" y="928" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-25" value="SYNC CALL TO DB" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="645" y="958" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-26" value="2 FUNCTIONAL components are competeing for the same resources - then i wills pilt into different mocroswervces" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="500" y="1170" width="630" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-27" value="" style="endArrow=classic;html=1;rounded=0;exitX=-0.003;exitY=0.906;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="91sjNXzrEvbF6dkrTKEq-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="900" as="sourcePoint" />
+            <mxPoint x="120" y="1140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-28" value="passcode" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="125" y="1148" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-29" value="How does locker service finds the locker ?&lt;br&gt;&lt;div&gt;&lt;br&gt;all the locations of locker are in DB.&lt;br&gt;We get user location in the request params.&lt;br&gt;Simple - find all unlocked or available lockers within 100 miles.&lt;br&gt;filtering by dimensions of order_id.&lt;br&gt;sort by&amp;nbsp; nearest distance.&lt;br&gt;return pagination results&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1218" width="350" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-30" value="NOSQL - pessimistic lock, optimisitic lock, consistent reads&lt;br&gt;&lt;br&gt;SQL - ACID&lt;br&gt;&lt;br&gt;indexing&lt;br&gt;shaarding" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="510" y="1198" width="340" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-31" value="How do we habdle concurernet users trying to reserve the same locker at the same time ?&lt;br&gt;&lt;br&gt;&lt;br&gt;DB will have serializable levels - most serialazable level . the table is serialized.,&lt;div&gt;this level will prevent dirty reads, phantome reads, atomicr reads.&lt;br&gt;It make ssure that ifone write is happengin then no other write can take place -whole table is locked for different writes&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-75" y="1355" width="650" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-32" value="How do we generate OTP ?&amp;nbsp;&lt;br&gt;&lt;br&gt;when we reserve calls - DB write is successful - OPT os generated - a new table records OPT with order_id, locker_id, user_id&lt;br&gt;- once DB is succesful - return to user." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="85" y="1500" width="690" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-33" value="2 minute timer for the first user -&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="640" y="1308" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-34" value="step by step - take one functional - complete it with all related components including scaling -&amp;nbsp;&lt;br&gt;take second functional - complete it with all components including scaling -&lt;br&gt;&lt;br&gt;&lt;br&gt;wrapping up -&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="160" y="1600" width="520" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="91sjNXzrEvbF6dkrTKEq-35" value="read more system design - go with confidence - have an answer for this -&amp;nbsp;&lt;br&gt;answers have to be logical and technically correct -&lt;br&gt;read more and understand in depth -&lt;br&gt;&lt;br&gt;Make 5 top components - SQS / DynamoDB -&amp;nbsp;&lt;br&gt;Read one of it completely and use it everywhere -&amp;nbsp;&lt;br&gt;explain it confidently&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="220" y="1700" width="410" height="110" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

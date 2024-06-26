@@ -1,0 +1,211 @@
+<mxfile host="app.diagrams.net" modified="2024-06-07T02:43:52.901Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="kb-a4OPazjVjkd-0wOxr" version="24.5.1" type="device">
+  <diagram name="Page-1" id="K_9WblAj4L5Jz3LoCryG">
+    <mxGraphModel dx="2156" dy="860" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-1" value="DESIGN TINDER" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="40" width="220" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-2" value="FUNCTIONAL REQUIREMENTS -&lt;br&gt;1. users will be displayed profiles based on their customized preferences&lt;br&gt;2. users can see a match if both have swiped right&lt;br&gt;3. Users can unswipe also - the profile can come again after some given time.&lt;br&gt;4. Define the flow -&amp;nbsp;&lt;br&gt;&lt;br&gt;1. System will provide recommendations&lt;br&gt;2. System will provide functionality to create and update user profiles.&lt;br&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-110" y="70" width="460" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-3" value="NON FUNCTIONAL requirements -&amp;nbsp;&lt;br&gt;1. Scalable&lt;br&gt;2. Highly available. - eventual consistency&lt;br&gt;3. Low Latency&amp;nbsp;&lt;br&gt;4. Durable - Fault Tolerants" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-140" y="180" width="400" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-4" value="ESTIMATIO&lt;span style=&quot;background-color: initial;&quot;&gt;N -&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;br&gt;Assume users - 200M monthly active users&lt;br&gt;Each user will be shown 10 profilers per day&lt;br&gt;2 match per day for each user.&lt;br&gt;user opens the app 5 times a day.&lt;br&gt;New users - 10M new users every month&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="425" y="50" width="450" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-8" value="API -&amp;nbsp;&lt;br&gt;1. /users - userDB&lt;br&gt;&lt;br&gt;2. /match - get,&amp;nbsp; -&amp;gt; list of users that are already matched. when a user clicks on match, it will give the profile of the other matched user&lt;br&gt;&lt;br&gt;/match?userId=${userId}&lt;br&gt;&lt;br&gt;3. /profiles - get , gets the 10 profiles that will be displayed&lt;br&gt;&lt;br&gt;/profiles?userId=${userId}&amp;amp;location=${location}" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="280" y="250" width="410" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-9" value="User" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="730" width="140" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-10" value="UserId" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="EnhLuSyk-9nW_7VjSZkK-9">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-11" value="Name" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="EnhLuSyk-9nW_7VjSZkK-9">
+          <mxGeometry y="60" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-12" value="Age" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="EnhLuSyk-9nW_7VjSZkK-9">
+          <mxGeometry y="90" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-13" value="Location" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="EnhLuSyk-9nW_7VjSZkK-9">
+          <mxGeometry y="120" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-14" value="creationDate" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="EnhLuSyk-9nW_7VjSZkK-9">
+          <mxGeometry y="150" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-20" value="Photos" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="EnhLuSyk-9nW_7VjSZkK-9">
+          <mxGeometry y="180" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-21" value="List&amp;lt;MatchedUsers&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="EnhLuSyk-9nW_7VjSZkK-9">
+          <mxGeometry y="210" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-42" value="Preferences" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="EnhLuSyk-9nW_7VjSZkK-9">
+          <mxGeometry y="240" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-16" value="MATCHES" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="830" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-17" value="User1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="EnhLuSyk-9nW_7VjSZkK-16">
+          <mxGeometry y="30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-18" value="User2" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="EnhLuSyk-9nW_7VjSZkK-16">
+          <mxGeometry y="60" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-19" value="Status -&amp;gt; is not shown, swiped right by 1st user only, is matched, is unswiped" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="EnhLuSyk-9nW_7VjSZkK-16">
+          <mxGeometry y="90" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-22" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="760" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-24" value="WEB&lt;br&gt;SERVICE /&amp;nbsp;&lt;br&gt;&amp;nbsp;API Gateway" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="100" y="620" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-25" value="Orchestration&lt;br&gt;Service" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="340" y="610" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-26" value="MATCH SERVICE that runs some kind of ML Algo" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="340" y="415" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-27" value="Users DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="630" y="600" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-28" value="Cache" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="530" y="435" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-30" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="EnhLuSyk-9nW_7VjSZkK-24" target="EnhLuSyk-9nW_7VjSZkK-35">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="290" y="500" as="sourcePoint" />
+            <mxPoint x="340" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-34" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.642;entryY=0.019;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="EnhLuSyk-9nW_7VjSZkK-26" target="EnhLuSyk-9nW_7VjSZkK-27">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="490" y="480" as="sourcePoint" />
+            <mxPoint x="540" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-35" value="LB" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="600" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-37" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.056;entryY=0.381;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="EnhLuSyk-9nW_7VjSZkK-24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="10" y="650" as="sourcePoint" />
+            <mxPoint x="60" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-38" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.906;exitY=0.581;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="EnhLuSyk-9nW_7VjSZkK-35" target="EnhLuSyk-9nW_7VjSZkK-25">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="490" y="500" as="sourcePoint" />
+            <mxPoint x="540" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-40" value="Matches DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="770" y="730" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-41" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="EnhLuSyk-9nW_7VjSZkK-26" target="EnhLuSyk-9nW_7VjSZkK-40">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="530" as="sourcePoint" />
+            <mxPoint x="540" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-43" value="how does profiles are displayes ?&amp;nbsp;&lt;br&gt;&lt;br&gt;Match service will get the top 10 profiles that suits the preference for each users - check if does&amp;nbsp;&lt;br&gt;&lt;br&gt;This service will run once every day&lt;br&gt;&lt;br&gt;&lt;br&gt;Query Pattern -&amp;nbsp;&lt;br&gt;select partition with location parameters&lt;br&gt;select users that match the preferences from that partition&lt;br&gt;&lt;br&gt;&lt;br&gt;Index -&amp;nbsp;&lt;br&gt;userId is the key, partitionId is the value&lt;br&gt;1st do a scan on index and get partitionId&lt;br&gt;2nd will be run the query in that partition" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="730" y="315" width="440" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-44" value="New YORK" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="610" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-45" value="San Francisco" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="590" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-46" value="India" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="610" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-47" value="Sharding By Location&lt;br&gt;&lt;br&gt;User request has the location information in parameter -&amp;nbsp;&lt;br&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="700" width="210" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-52" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="EnhLuSyk-9nW_7VjSZkK-25" target="EnhLuSyk-9nW_7VjSZkK-26">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="640" as="sourcePoint" />
+            <mxPoint x="570" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-53" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.988;exitY=0.571;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="EnhLuSyk-9nW_7VjSZkK-26" target="EnhLuSyk-9nW_7VjSZkK-28">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="640" as="sourcePoint" />
+            <mxPoint x="570" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-55" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="-10" y="630" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-56" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="EnhLuSyk-9nW_7VjSZkK-22">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="720" as="sourcePoint" />
+            <mxPoint x="760" y="780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-57" value="MATCHES" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="950" y="830" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-59" value="User" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="EnhLuSyk-9nW_7VjSZkK-57">
+          <mxGeometry y="30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-61" value="List of users matched&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="EnhLuSyk-9nW_7VjSZkK-57">
+          <mxGeometry y="60" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-62" value="List of users swiped right&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="EnhLuSyk-9nW_7VjSZkK-57">
+          <mxGeometry y="90" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-63" value="List of users swiped left" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="EnhLuSyk-9nW_7VjSZkK-57">
+          <mxGeometry y="120" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-65" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.006;entryY=0.669;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="EnhLuSyk-9nW_7VjSZkK-55" target="EnhLuSyk-9nW_7VjSZkK-24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="70" y="760" as="sourcePoint" />
+            <mxPoint x="120" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-66" value="/matches" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="5" y="618" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-67" value="/users" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="30" y="688" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-71" value="User Service" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="460" y="610" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="EnhLuSyk-9nW_7VjSZkK-72" target="EnhLuSyk-9nW_7VjSZkK-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-75" value="" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Queues_Storage.svg;" vertex="1" parent="1">
+          <mxGeometry x="770" y="618" width="50" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-72" value="Location Index" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="710" y="435" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-77" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="EnhLuSyk-9nW_7VjSZkK-71" target="EnhLuSyk-9nW_7VjSZkK-27">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="650" as="sourcePoint" />
+            <mxPoint x="590" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-78" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="EnhLuSyk-9nW_7VjSZkK-75">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="690" y="640" as="sourcePoint" />
+            <mxPoint x="590" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EnhLuSyk-9nW_7VjSZkK-79" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.31;exitY=0.034;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="EnhLuSyk-9nW_7VjSZkK-75" target="EnhLuSyk-9nW_7VjSZkK-72">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="650" as="sourcePoint" />
+            <mxPoint x="590" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
