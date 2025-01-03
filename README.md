@@ -24,14 +24,25 @@
   * Multi Leader
   * Leaderless
 * Caching
+  * Cache Policy
+  * Cache consistency
+  * Handling Cache miss
+  * Thundering Herd Problem
 * Data Serialization
 * Synchronous vs Asynchronous
 * Transactions
 * ACID properties
 * CAP theorem
 * Load Balancing
+  * Load Bakancing Policy
+  * How to ensure high availability
+* Message Queue Asynchronous messaging
+  *  Message Semantics
+  *  Topic Exchange  
 * DNs Routing
 * Fault Tolerance
+  * Redundancy
+  * Recovery 
 * Orchestration vs Choreography
 * Rollout and Deployment Statergies
 * Sidecar proxy
@@ -62,7 +73,8 @@
   * Row oritend storage ?
   * what is a page and disk ?
   * What are various indexes ?
-  * How are indexes implemented ? 
+  * How are indexes implemented ?
+  * What is sharding ? Data Locality ?
 * NoSQL Key Value Databases
   * Column oriented storage - parquet 
 * NoSQL Time Series Database
