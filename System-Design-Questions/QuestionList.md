@@ -3,11 +3,13 @@
 | **Easy**       | Design a URL Shortener (e.g., bit.ly)                                         | Hashing, database indexing                                                                    |
 | **Easy**       | Design PasteBin (e.g., pastebin)                                               | Hashing, database indexing                                                                    |
 | **Easy**       | Design a Cache System (e.g., LRU Cache)                                       | Caching strategies, data structures (hash maps, doubly linked lists)                          |
+| **Easy**       | Design Offline Leetcode contests (e.g., Leetcode)                             | Caching strategies, data structures (hash maps, doubly linked lists)                          |
 | **Easy**       | Design a Photo Storage System (e.g., Instagram)                                | Caching strategies, data structures (hash maps, doubly linked lists)                          |
 | **Easy**       | Design a Social Media Feed                                                   | Pagination, sorting, databases                                                                 |
 | **Easy**       | Design an Online Chat System                                                  | Real-time messaging, WebSockets                                                                 |
 | **Medium**     | Design a Messaging System (e.g., WhatsApp)                                    | Message queues, real-time systems, database replication                                        |
 | **Medium**     | Design a File Syncing service (e.g., Dropbox, Google Drive)                     | Message queues, real-time systems, database replication                                        |
+| **Medium**     | Design a Top K youtube (e.g., Top K aggregator)                     | Message queues, real-time systems, database replication                                        |
 | **Medium**     | Design a Search Autocomplete System                                           | Tries, autocomplete algorithms, indexing                                                      |
 | **Medium**     | Design a Ride-Sharing System (e.g., Uber)                                     | Geospatial data, matching algorithms, scalability                                             |
 | **Medium**     | Design an E-commerce Website (e.g., Amazon)                                   | Microservices, inventory management, load balancing                                            |
