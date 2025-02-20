@@ -1,8 +1,9 @@
 | **Difficulty** | **System Design Question**                                                    | **Concepts**                                                                                  |
 |----------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | **Easy**       | Design a URL Shortener (e.g., bit.ly)                                         | Hashing, database indexing                                                                    |
-| **Easy**       | Design PasteBin (e.g., bit.ly)                                               | Hashing, database indexing                                                                    |
+| **Easy**       | Design PasteBin (e.g., pastebin)                                               | Hashing, database indexing                                                                    |
 | **Easy**       | Design a Cache System (e.g., LRU Cache)                                       | Caching strategies, data structures (hash maps, doubly linked lists)                          |
+| **Easy**       | Design a Photo Storage System (e.g., Instagram)                                       | Caching strategies, data structures (hash maps, doubly linked lists)                          |
 | **Easy**       | Design a Social Media Feed                                                   | Pagination, sorting, databases                                                                 |
 | **Easy**       | Design an Online Chat System                                                  | Real-time messaging, WebSockets                                                                 |
 | **Medium**     | Design a Messaging System (e.g., WhatsApp)                                    | Message queues, real-time systems, database replication                                        |
