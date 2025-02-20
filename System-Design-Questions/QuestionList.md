@@ -19,6 +19,7 @@
 | **Medium**     | Design a Notification System (e.g., Push Notifications)                       | Pub/Sub model, real-time messaging, message queues                                            |
 | **Medium**     | Design a Content Delivery Network (CDN)                                       | Caching, geo-distribution, load balancing                                                     |
 | **Hard**       | Design a Distributed File System (e.g., HDFS)                                 | Data replication, fault tolerance, sharding                                                   |
+| **Hard**       | Design a real time leaderboard (e.g., Online Gaming)                         | Data replication, fault tolerance, sharding                                                   |
 | **Hard**       | Design a Distributed Key-Value Store (e.g., Redis, DynamoDB)                  | Partitioning, consistency, replication, CAP theorem                                           |
 | **Hard**       | Design a Large-Scale Real-Time Analytics Platform                             | Stream processing, batch processing, data pipelines, scaling                                  |
 | **Hard**       | Design a High-Throughput Distributed Logging System (e.g., ELK Stack)         | Log aggregation, indexing, distributed storage                                                |
